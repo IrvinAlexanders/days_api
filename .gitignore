@@ -1,2 +1,5 @@
 .env
 ./api/.env
+.secret
+db.sqlite3
+./api/__pycache__
