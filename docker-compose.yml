@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  api:
+    enviroment:
+      SECRET_KEY: 0x!b#(1*cd73w$&azzc6p+essg7v=g80ls#z&xcx*mpemx&@9$
+      CALEND_API_KEY: c058abf41c7c9f406db519d066071d2db94e43ff
+    build: .
+    command: "python manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    env_file:
+      - ./.secret
